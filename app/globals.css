@@ -309,21 +309,27 @@ h1 em, h2 em {
 }
 
 .heroButton {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: max-content;
-  margin-inline: auto;
-  padding: 13px 20px 13px 24px;
-  border: 1px solid var(--line);
-  border-radius: 99px;
-  font-size: 13px;
-  font-weight: 600;
-  transition: border-color .3s, background .3s, transform .3s;
+display: flex;
+align-items: center;
+gap: 10px;
+width: max-content;
+margin-inline: auto;
+padding: 13px 20px 13px 24px;
+border: 1px solid rgba(255, 255, 255, .16);
+border-radius: 99px;
+font-size: 13px;
+font-weight: 600;
+background: rgba(255, 255, 255, .06);
+backdrop-filter: blur(20px) saturate(140%);
+-webkit-backdrop-filter: blur(20px) saturate(140%);
+box-shadow: 0 8px 32px rgba(0, 0, 0, .20), inset 0 1px rgba(255, 255, 255, .08);
+transition: border-color .3s, background .3s, transform .3s, box-shadow .3s;
 }
 .heroButton:hover {
-  border-color: var(--ice);
-  transform: translateY(-2px);
+border-color: rgba(159, 199, 217, .40);
+background: rgba(255, 255, 255, .10);
+box-shadow: 0 12px 40px rgba(0, 0, 0, .28), inset 0 1px rgba(255, 255, 255, .12);
+transform: translateY(-2px);
 }
 .heroButton b {
   display: grid;

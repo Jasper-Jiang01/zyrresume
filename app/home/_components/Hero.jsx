@@ -28,7 +28,7 @@ export default function Hero() {
         <p className="heroSub">
           你好，我是周依睿，一名UI设计师，始终热爱着打造兼具美感与实用性的数字产品体验。
         </p>
-        <a className="heroButton" href="#work">
+        <a className="heroButton" href="#work" style={{ backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)' }}>
           Explore selected work <b>→</b>
         </a>
         <div className="heroGallery">
