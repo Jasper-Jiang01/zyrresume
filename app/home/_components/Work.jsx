@@ -26,6 +26,9 @@ export default function Work() {
                 className="projectCover"
                 src={`${ASSETS}${p.cover}`}
                 alt={`${p.name}封面`}
+                loading="lazy"
+                width="640"
+                height="400"
               />
               <div className="projectContent">
                 <span>{p.no}</span>

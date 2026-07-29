@@ -10,10 +10,14 @@ export default function Galaxy() {
     const ctx = canvas.getContext('2d')
     let frame
     let stars = []
+    let width = 0
+    let height = 0
 
     const resize = () => {
-      const { width, height } = canvas.parentElement.getBoundingClientRect()
+      const rect = canvas.parentElement.getBoundingClientRect()
       const dpr = Math.min(devicePixelRatio || 1, 2)
+      width = rect.width
+      height = rect.height
       canvas.width = width * dpr
       canvas.height = height * dpr
       canvas.style.width = `${width}px`
@@ -31,9 +35,9 @@ export default function Galaxy() {
     }
 
     const draw = () => {
-      const { width, height } = canvas.parentElement.getBoundingClientRect()
       ctx.clearRect(0, 0, width, height)
-      stars.forEach((s) => {
+      for (let i = 0; i < stars.length; i++) {
+        const s = stars[i]
         s.p += 0.018
         ctx.fillStyle = `rgba(233,230,223,${0.18 + Math.sin(s.p) * 0.16})`
         ctx.beginPath()
@@ -41,7 +45,7 @@ export default function Galaxy() {
         ctx.fill()
         s.y -= 0.09
         if (s.y < 0) s.y = height
-      })
+      }
       frame = requestAnimationFrame(draw)
     }
 

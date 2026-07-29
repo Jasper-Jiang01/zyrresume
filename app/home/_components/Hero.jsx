@@ -37,6 +37,10 @@ export default function Hero() {
               key={i}
               src={`${ASSETS}hero-cover/placeholder-${n}.png`}
               alt="作品展示"
+              fetchPriority={i < 2 ? "high" : undefined}
+              loading={i < 2 ? undefined : "lazy"}
+              width="320"
+              height="240"
             />
           ))}
         </div>

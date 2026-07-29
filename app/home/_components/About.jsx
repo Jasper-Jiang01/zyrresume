@@ -23,11 +23,14 @@ export default function About() {
         </div>
         <div className="aboutGrid">
           <figure className="portrait">
-            <img src={`${ASSETS}about/zhou-yirui-portrait.png`} alt="周依睿" />
+            <img src={`${ASSETS}about/zhou-yirui-portrait.png`} alt="周依睿" fetchPriority="high" width="480" height="600" />
             <img
               className="floatingAccent"
               src={`${ASSETS}about/about-floating-accent.png`}
               alt=""
+              loading="lazy"
+              width="120"
+              height="120"
             />
           </figure>
           <div className="aboutInfo">
@@ -44,7 +47,7 @@ export default function About() {
                     href={card.href}
                     key={card.value}
                   >
-                    <img src={`${ASSETS}${card.icon}`} alt="" />
+                    <img src={`${ASSETS}${card.icon}`} alt="" loading="lazy" width="32" height="32" />
                     <span>{card.value}</span>
                   </a>
                 ))}

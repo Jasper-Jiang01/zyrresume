@@ -5,7 +5,7 @@ export default function Nav() {
     <header className="navWrap">
       <nav className="nav">
         <a href="#home" className="brand">
-          <img src={`${ASSETS}about/avatar.jpg`} alt="周依睿" />
+          <img src={`${ASSETS}about/avatar.jpg`} alt="周依睿" fetchPriority="high" width="40" height="40" />
           <span>
             <b>周依睿</b>
             <em>Zhou Yirui</em>

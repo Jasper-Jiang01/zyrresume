@@ -4,11 +4,26 @@ import { useEffect } from 'react'
 
 export function useCursorAura() {
   useEffect(() => {
-    const update = (event) => {
-      document.documentElement.style.setProperty('--mouse-x', `${event.clientX}px`)
-      document.documentElement.style.setProperty('--mouse-y', `${event.clientY}px`)
+    let rafId = null
+    let pendingX = 0
+    let pendingY = 0
+
+    const handleMove = (e) => {
+      pendingX = e.clientX
+      pendingY = e.clientY
+      if (rafId === null) {
+        rafId = requestAnimationFrame(() => {
+          document.documentElement.style.setProperty('--mouse-x', `${pendingX}px`)
+          document.documentElement.style.setProperty('--mouse-y', `${pendingY}px`)
+          rafId = null
+        })
+      }
     }
-    window.addEventListener('pointermove', update)
-    return () => window.removeEventListener('pointermove', update)
+
+    window.addEventListener('pointermove', handleMove, { passive: true })
+    return () => {
+      window.removeEventListener('pointermove', handleMove)
+      if (rafId !== null) cancelAnimationFrame(rafId)
+    }
   }, [])
 }

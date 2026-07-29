@@ -61,7 +61,11 @@ img { display: block; max-width: 100%; height: auto; }
 /* =========================================
    4. Section Spacing
    ========================================= */
-.section { padding-block: 130px; }
+.section {
+  padding-block: 130px;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
+}
 
 @media (width <= 900px) {
   .section { padding-block: 85px; }
@@ -79,6 +83,7 @@ img { display: block; max-width: 100%; height: auto; }
   pointer-events: none;
   z-index: 0;
   mix-blend-mode: screen;
+  will-change: transform;
   background: radial-gradient(circle,
     rgba(159, 199, 217, .10),
     rgba(125, 96, 255, .04) 36%,
@@ -714,6 +719,8 @@ transform: translateY(-2px);
   overflow: hidden;
   padding: 160px 0 60px;
   background: var(--surface);
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
 }
 
 .galaxyWrap {
