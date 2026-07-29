@@ -1,4 +1,4 @@
-export const ASSETS = '/assets/'
+export const ASSETS = '/zyrresume/assets/'
 
 export const projects = [
   {
