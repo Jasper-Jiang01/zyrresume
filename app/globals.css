@@ -255,7 +255,7 @@ img { display: block; max-width: 100%; height: auto; }
    ========================================= */
 .hero {
   position: relative;
-  padding-top: 130px;
+  padding-top: 90px;
   padding-bottom: 220px;
   min-height: 100vh;
   overflow: hidden;
@@ -397,7 +397,7 @@ transform: translateY(-2px);
 }
 
 @media (width <= 560px) {
-  .hero { padding-top: 100px; min-height: 680px; }
+  .hero { padding-top: 60px; min-height: 680px; }
   .heroGallery img { width: 260px; }
 }
 
