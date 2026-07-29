@@ -23,10 +23,10 @@ export default function About() {
         </div>
         <div className="aboutGrid">
           <figure className="portrait">
-            <img src={`${ASSETS}about/zhou-yirui-portrait.png`} alt="周依睿" fetchPriority="high" width="480" height="600" />
+            <img src={`${ASSETS}about/portrait.webp`} alt="周依睿" fetchPriority="high" width="480" height="600" />
             <img
               className="floatingAccent"
-              src={`${ASSETS}about/about-floating-accent.png`}
+              src={`${ASSETS}about/about-floating-accent.webp`}
               alt=""
               loading="lazy"
               width="120"

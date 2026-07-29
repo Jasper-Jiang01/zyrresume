@@ -35,7 +35,7 @@ export default function Hero() {
           {[1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2].map((n, i) => (
             <img
               key={i}
-              src={`${ASSETS}page${n}.png`}
+              src={`${ASSETS}page${n}.webp`}
               alt="作品展示"
               fetchPriority={i < 2 ? "high" : undefined}
               loading={i < 2 ? undefined : "lazy"}

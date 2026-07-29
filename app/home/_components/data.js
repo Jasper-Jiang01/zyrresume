@@ -9,7 +9,7 @@ export const projects = [
     type: 'C端/成长体系',
     role: '你的角色 · 项目阶段',
     result: '项目亮点结果',
-    cover: 'project-covers/placeholder-01.jpg',
+    cover: 'project-covers/placeholder-01.webp',
   },
   {
     no: '02',
@@ -17,7 +17,7 @@ export const projects = [
     type: '项目类型/所属领域',
     role: '你的角色 · 项目阶段',
     result: '项目亮点结果',
-    cover: 'project-covers/project-02.png',
+    cover: 'project-covers/project-02.webp',
   },
   {
     no: '03',
@@ -25,7 +25,7 @@ export const projects = [
     type: '项目类型/所属领域',
     role: '你的角色 · 项目阶段',
     result: '项目亮点结果',
-    cover: 'project-covers/placeholder-03.png',
+    cover: 'project-covers/placeholder-03.webp',
   },
   {
     no: '04',
@@ -33,7 +33,7 @@ export const projects = [
     type: '项目类型/所属领域',
     role: '你的角色 · 项目阶段',
     result: '项目亮点结果',
-    cover: 'project-covers/project-04.png',
+    cover: 'project-covers/project-04.webp',
   },
   {
     no: '05',
@@ -41,24 +41,24 @@ export const projects = [
     type: '项目类型/所属领域',
     role: '你的角色 · 项目阶段',
     result: '项目亮点结果',
-    cover: 'project-covers/placeholder-05.png',
+    cover: 'project-covers/placeholder-05.webp',
   },
 ]
 
 export const contactCards = [
   {
-    icon: 'about/contact-email.png',
+    icon: 'about/contact-email.webp',
     value: '474005527@qq.com',
     href: 'mailto:474005527@qq.com',
   },
   {
-    icon: 'about/contact-phone.png',
+    icon: 'about/contact-phone.webp',
     value: '13325360090',
     href: 'tel:13325360090',
     featured: true,
   },
   {
-    icon: 'about/contact-wechat.png',
+    icon: 'about/contact-wechat.webp',
     value: 'VAsh03113',
     href: '#about',
   },
