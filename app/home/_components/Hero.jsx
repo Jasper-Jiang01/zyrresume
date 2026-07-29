@@ -32,7 +32,7 @@ export default function Hero() {
           Explore selected work <b>→</b>
         </a>
         <div className="heroGallery">
-          {[1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3].map((n, i) => (
+          {[1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2].map((n, i) => (
             <img
               key={i}
               src={`${ASSETS}page${n}.png`}
