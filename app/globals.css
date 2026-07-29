@@ -256,9 +256,9 @@ img { display: block; max-width: 100%; height: auto; }
 .hero {
   position: relative;
   padding-top: 170px;
+  padding-bottom: 220px;
   min-height: 100vh;
-  overflow-x: hidden;
-  overflow-y: visible;
+  overflow: hidden;
 }
 
 .heroInner {
@@ -269,10 +269,7 @@ img { display: block; max-width: 100%; height: auto; }
 
 .heroBends {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: -220px;
+  inset: 0;
   z-index: 0;
   pointer-events: none;
 }
