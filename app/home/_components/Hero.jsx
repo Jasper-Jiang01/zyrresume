@@ -25,7 +25,7 @@ export default function Hero() {
         <h1>
           <span style={{color: '#ffffff', wordSpacing: '.2em'}}>DESIGN  PRODUCTS</span><em style={{color: '#7B5FFF', wordSpacing: '.2em'}}>THAT  PEOPLE</em>
         </h1>
-        <p className="heroSub">
+        <p className="heroSub" style={{ marginTop: '-48px', fontSize: '16px' }}>
           你好，我是周依睿，一名UI设计师，始终热爱着打造兼具美感与实用性的数字产品体验。
         </p>
         <a className="heroButton" href="#work" style={{ backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)' }}>
@@ -44,17 +44,17 @@ export default function Hero() {
             />
           ))}
         </div>
-        <div className="heroBenefits">
-          <div>
-            <b>Product Strategy</b>
+        <div className="heroBenefits" >
+          <div style={{ textAlign: 'center' }}>
+            <b style={{ textAlign: 'center', display: 'block' }}>Product Strategy</b>
             <span>从模糊需求到清晰的产品方向定义。</span>
           </div>
-          <div>
-            <b>Interaction & Motion</b>
+          <div style={{ textAlign: 'center' }}>
+            <b style={{ textAlign: 'center', display: 'block' }}>Interaction & Motion</b>
             <span>让界面响应灵敏、流畅且富有生命力。</span>
           </div>
-          <div>
-            <b>Visual Systems</b>
+          <div style={{ textAlign: 'center' }}>
+            <b style={{ textAlign: 'center', display: 'block' }}>Visual Systems</b>
             <span>构建可延展的独特设计语言体系。</span>
           </div>
         </div>
