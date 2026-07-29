@@ -15,7 +15,7 @@ export default function HomePage() {
   useCursorAura()
 
   useEffect(() => {
-    const timer = setTimeout(() => setIntro(false), 1450)
+    const timer = setTimeout(() => setIntro(false), 800)
     return () => clearTimeout(timer)
   }, [])
 

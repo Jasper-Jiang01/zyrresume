@@ -61,11 +61,7 @@ img { display: block; max-width: 100%; height: auto; }
 /* =========================================
    4. Section Spacing
    ========================================= */
-.section {
-  padding-block: 130px;
-  content-visibility: auto;
-  contain-intrinsic-size: auto 800px;
-}
+.section { padding-block: 130px; }
 
 @media (width <= 900px) {
   .section { padding-block: 85px; }
@@ -103,7 +99,7 @@ img { display: block; max-width: 100%; height: auto; }
   background: var(--ink);
   z-index: 9999;
   pointer-events: none;
-  animation: curtain .9s .5s cubic-bezier(.65, 0, .35, 1) forwards;
+  animation: curtain .6s .2s cubic-bezier(.65, 0, .35, 1) forwards;
 }
 
 .curtainMeta {
@@ -117,7 +113,7 @@ img { display: block; max-width: 100%; height: auto; }
   letter-spacing: .18em;
   font-size: 11px;
   text-transform: uppercase;
-  animation: fade .45s .55s forwards;
+  animation: fade .3s .25s forwards;
 }
 
 .curtainMeta i {
@@ -127,7 +123,7 @@ img { display: block; max-width: 100%; height: auto; }
   justify-self: center;
   transform: scaleX(0);
   transform-origin: left center;
-  animation: ruleExpand .6s .7s cubic-bezier(.2, .8, .2, 1) forwards;
+  animation: ruleExpand .4s .35s cubic-bezier(.2, .8, .2, 1) forwards;
 }
 
 .curtainMeta em {
@@ -719,8 +715,6 @@ transform: translateY(-2px);
   overflow: hidden;
   padding: 160px 0 60px;
   background: var(--surface);
-  content-visibility: auto;
-  contain-intrinsic-size: auto 600px;
 }
 
 .galaxyWrap {
