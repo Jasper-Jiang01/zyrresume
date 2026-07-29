@@ -1,4 +1,6 @@
-export const ASSETS = '/zyrresume/assets/'
+const isProd = process.env.NODE_ENV === 'production'
+
+export const ASSETS = isProd ? '/zyrresume/assets/' : '/assets/'
 
 export const projects = [
   {
