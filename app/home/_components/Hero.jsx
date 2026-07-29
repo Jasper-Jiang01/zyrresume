@@ -32,15 +32,15 @@ export default function Hero() {
           Explore selected work <b>→</b>
         </a>
         <div className="heroGallery">
-          {[1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6].map((n, i) => (
+          {[1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3].map((n, i) => (
             <img
               key={i}
-              src={`${ASSETS}hero-cover/placeholder-${n}.png`}
+              src={`${ASSETS}page${n}.png`}
               alt="作品展示"
               fetchPriority={i < 2 ? "high" : undefined}
               loading={i < 2 ? undefined : "lazy"}
-              width="320"
-              height="240"
+              width="360"
+              height="203"
             />
           ))}
         </div>
