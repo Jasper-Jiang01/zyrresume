@@ -1,11 +1,11 @@
-/** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === 'production'
+import { BASE_PATH } from './site.config.mjs'
 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
-  basePath: isProd ? '/zyrresume' : '',
-  assetPrefix: isProd ? '/zyrresume/' : '',
+  basePath: BASE_PATH,
+  assetPrefix: BASE_PATH ? `${BASE_PATH}/` : '',
   images: {
     unoptimized: true,
   },
