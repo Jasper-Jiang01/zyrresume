@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { ASSETS } from './data'
 import ColorBends from './ColorBendsClient'
+import FoldText from './FoldText'
 
 export default function Hero() {
   return (
@@ -24,8 +25,36 @@ export default function Hero() {
       </div>
       <div className="shell heroInner">
         <h1>
-          <span className="heroTitleLight">DESIGN  PRODUCTS</span>
-          <em className="heroTitleAccent">THAT  PEOPLE</em>
+          <FoldText
+            text="DESIGN PRODUCTS"
+            splitBy="char"
+            hinge="top"
+            trigger="mount"
+            duration={0.7}
+            stagger={0.03}
+            ease="power3.out"
+            perspective={600}
+            creaseShading={0.5}
+            className="heroTitleLight heroFold"
+            color="#ffffff"
+            fontSize="inherit"
+            fontWeight="inherit"
+          />
+          <FoldText
+            text="THAT PEOPLE"
+            splitBy="char"
+            hinge="bottom"
+            trigger="mount"
+            duration={0.7}
+            stagger={0.03}
+            ease="power3.out"
+            perspective={600}
+            creaseShading={0.5}
+            className="heroTitleAccent heroFold heroFoldEm"
+            color="#7B5FFF"
+            fontSize="inherit"
+            fontWeight="inherit"
+          />
         </h1>
         <p className="heroSub">
           你好！我是周依睿，我目前在美团担任UI视觉设计师，我始终热爱并追求着视觉语言的设计与探索。

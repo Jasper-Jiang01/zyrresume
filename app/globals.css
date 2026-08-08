@@ -319,6 +319,18 @@ h1 em, h2 em {
   word-spacing: .2em;
 }
 
+/* FoldText 折叠标题：还原原本 h1 / h1 em 的排版表现 */
+.heroFold {
+  display: block;
+  line-height: inherit;
+  letter-spacing: inherit;
+  white-space: normal;
+}
+.heroFoldEm {
+  font: italic 500 1em var(--font-serif);
+  letter-spacing: -.045em;
+}
+
 .heroButton {
 display: flex;
 align-items: center;
@@ -787,4 +799,34 @@ transform: translateY(-2px);
     margin-top: 40px;
   }
   .mail { font-size: 18px; }
+}
+
+/* =========================================
+Regular Project Page
+========================================= */
+.regularProject {
+  padding: 160px 0 120px;
+}
+
+.regularProjectTitle {
+  font-size: clamp(32px, 4vw, 56px);
+  margin: 0 0 48px;
+}
+
+.regularProjectList {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.regularProjectImg {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+}
+
+@media (width <= 700px) {
+  .regularProject { padding: 120px 0 80px; }
+  .regularProjectList { gap: 16px; }
 }

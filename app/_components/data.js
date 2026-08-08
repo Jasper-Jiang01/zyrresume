@@ -29,11 +29,12 @@ export const projects = [
   },
   {
     no: '04',
-    name: '其他项目',
+    name: '日常产出',
     type: '项目类型/所属领域',
     role: '你的角色 · 项目阶段',
     result: '项目亮点结果',
     cover: 'page3.webp',
+    href: '/regularProject',
   },
 ]
 
