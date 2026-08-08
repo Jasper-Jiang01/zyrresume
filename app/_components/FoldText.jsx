@@ -2,11 +2,21 @@
 
 import { useEffect, useMemo, useRef } from 'react'
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import './FoldText.css'
 
-gsap.registerPlugin(ScrollTrigger)
+// ScrollTrigger 只在 trigger="scroll" 时才需要，按需动态导入可以避免
+// mount/hover/loop 等其他触发方式也把这部分插件代码打进客户端 bundle。
+let scrollTriggerPromise = null
+const loadScrollTrigger = () => {
+  if (!scrollTriggerPromise) {
+    scrollTriggerPromise = import('gsap/ScrollTrigger').then(mod => {
+      gsap.registerPlugin(mod.ScrollTrigger)
+      return mod.ScrollTrigger
+    })
+  }
+  return scrollTriggerPromise
+}
 
 const HINGE_CONFIG = {
   top: { origin: '50% 0%', rotateX: -92, rotateY: 0 },
@@ -142,6 +152,7 @@ const FoldText = ({
 
     let scrollTrigger
     let hoverHandler
+    let cancelled = false
 
     if (trigger === 'hover') {
       gsap.set(pieces, { opacity: 1, rotateX: 0, rotateY: 0, '--fold-crease': 0, transformOrigin: hingeConfig.origin })
@@ -149,11 +160,15 @@ const FoldText = ({
       root.addEventListener('mouseenter', hoverHandler)
     } else if (trigger === 'scroll') {
       gsap.set(pieces, fromVars)
-      scrollTrigger = ScrollTrigger.create({
-        trigger: root,
-        start: 'top 82%',
-        once: true,
-        onEnter: () => play(false)
+      // 按需异步加载 ScrollTrigger，避免非 scroll 触发方式也承担这部分体积。
+      loadScrollTrigger().then(ScrollTrigger => {
+        if (cancelled) return
+        scrollTrigger = ScrollTrigger.create({
+          trigger: root,
+          start: 'top 82%',
+          once: true,
+          onEnter: () => play(false)
+        })
       })
     } else if (trigger === 'loop') {
       play(true)
@@ -162,6 +177,7 @@ const FoldText = ({
     }
 
     return () => {
+      cancelled = true
       if (hoverHandler) root.removeEventListener('mouseenter', hoverHandler)
       scrollTrigger?.kill()
       killTimeline()
