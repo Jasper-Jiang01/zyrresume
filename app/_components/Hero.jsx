@@ -28,7 +28,7 @@ export default function Hero() {
           <em className="heroTitleAccent">THAT  PEOPLE</em>
         </h1>
         <p className="heroSub">
-          你好，我是周依睿，一名UI设计师，始终热爱着打造兼具美感与实用性的数字产品体验。
+          你好！我是周依睿，我目前在美团担任UI视觉设计师，我始终热爱并追求着视觉语言的设计与探索。
         </p>
         <a className="heroButton" href="#work">
           Explore selected work <b>→</b>

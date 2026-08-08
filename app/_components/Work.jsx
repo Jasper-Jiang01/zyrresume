@@ -23,14 +23,16 @@ export default function Work() {
         <div className="projectList">
           {projects.map((p) => (
             <article className="project" key={p.no}>
-              <Image
-                className="projectCover"
-                src={`${ASSETS}${p.cover}`}
-                alt={`${p.name}封面`}
-                loading="lazy"
-                width={960}
-                height={540}
-              />
+              <div className="projectCoverWrap">
+                <Image
+                  className="projectCover"
+                  src={`${ASSETS}${p.cover}`}
+                  alt={`${p.name}封面`}
+                  loading="lazy"
+                  fill
+                  sizes="(max-width: 700px) 100vw, (max-width: 900px) 50vw, 40vw"
+                />
+              </div>
               <div className="projectContent">
                 <span>{p.no}</span>
                 <div>
