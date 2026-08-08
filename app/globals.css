@@ -331,7 +331,7 @@ h1 em, h2 em {
   letter-spacing: -.045em;
 }
 
-.heroButton {
+.heroButton, .heroButtonStar .inner-content {
 display: flex;
 align-items: center;
 gap: 10px;
@@ -347,21 +347,34 @@ backdrop-filter: blur(20px) saturate(140%);
 -webkit-backdrop-filter: blur(20px) saturate(140%);
 box-shadow: 0 8px 32px rgba(0, 0, 0, .20), inset 0 1px rgba(255, 255, 255, .08);
 transition: border-color .3s, background .3s, transform .3s, box-shadow .3s;
+color: inherit;
 }
-.heroButton:hover {
+.heroButton:hover, .heroButtonStar:hover .inner-content {
 border-color: rgba(159, 199, 217, .40);
 background: rgba(255, 255, 255, .10);
 box-shadow: 0 12px 40px rgba(0, 0, 0, .28), inset 0 1px rgba(255, 255, 255, .12);
 transform: translateY(-2px);
 }
-.heroButton b {
-  display: grid;
-  place-items: center;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, .12);
-  font-size: 13px;
+.heroButton b, .heroButtonStar b {
+display: grid;
+place-items: center;
+width: 22px;
+height: 22px;
+border-radius: 50%;
+background: rgba(255, 255, 255, .12);
+font-size: 13px;
+}
+
+/* StarBorder 流光描边按钮：融合原 heroButton 视觉 */
+.heroButtonStar {
+display: block;
+width: max-content;
+margin: 0 auto;
+border-radius: 99px;
+}
+.heroButtonStar .inner-content {
+margin-inline: 0;
+border-radius: 99px;
 }
 
 /* Hero Gallery */

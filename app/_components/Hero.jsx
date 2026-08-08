@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { ASSETS } from './data'
 import ColorBends from './ColorBendsClient'
 import FoldText from './FoldText'
+import StarBorder from './StarBorder'
 
 export default function Hero() {
   return (
@@ -59,9 +60,16 @@ export default function Hero() {
         <p className="heroSub">
           你好！我是周依睿，我目前在美团担任UI视觉设计师，我始终热爱并追求着视觉语言的设计与探索。
         </p>
-        <a className="heroButton" href="#work">
+        <StarBorder
+          as="a"
+          href="#work"
+          className="heroButtonStar"
+          color="#7B5FFF"
+          speed="4s"
+          thickness={2}
+        >
           Explore selected work <b>→</b>
-        </a>
+        </StarBorder>
         <div className="heroGallery">
           {[1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2].map((n, i) => (
             <Image
